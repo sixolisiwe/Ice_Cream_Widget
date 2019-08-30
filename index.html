@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+<link rel="stylesheet" href="Ice_cream.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script type="text/x-template" class="userTemplate">
+</head>
+<table>
+
+<tr>
+        <!-- <th>Flavour</th>
+        <th>Container</th>
+        <th> Topping</th> -->
+        <th> Total</th>
+      </tr>
+{{#each perIceCream}}
+    <tr>  
+          <td>{{flavour}}</td>
+          <td>{{container}}</td>
+		  <td>{{topping}}</td>
+		  <td>{{total}}</td>
+          
+    </tr>
+    {{/each}}
+    </table>
+    
+    </script>
+
+<body>
+
+	<div class="container">
+		<h1>Ice cream</h1>
+		<div>
+			<div class="row">
+				<i>Select a flavour, container & topping for the price to be calculated.
+
+				</i>
+			</div>
+			<br>
+			<div class="rowError">
+				
+			</div>
+			<div class="row">
+				select flavour: <label class="">
+					<input type="radio" name="flav" class="flavourSel" value="vanilla">
+					<span class="label-body">Vanilla</span>
+				</label>
+				<label class="">
+					<input type="radio" name="flav" class="flavourSel" value="chocolate">
+					<span class="label-body">Chocolate</span>
+				</label>
+				<label class="">
+					<input type="radio" name="flav" class="flavourSel" value="strawberry">
+					<span class="label-body">Strawberry</span>
+				</label>
+			
+			</div> <br>
+			<div class="row">
+
+				select container: <label class="">
+					<input type="radio" name="cont" class="containerSel" value="SugarCone">
+					<span class="label-body">Sugar Cone</span>
+				</label>
+
+				<label class="">
+					<input type="radio" name="cont" class="containerSel" value="PlainCone">
+					<span class="label-body">Plain Cone</span>
+				</label>
+
+				<label class="">
+					<input type="radio" name="cont" class="containerSel" value="Paper Cup">
+					<span class="label-body">Paper Cup</span>
+				</label>
+				
+
+			
+			</div><br>
+			<div class="row">
+				select topping:<label class="">
+					<input type="checkbox" name="" class="toppingSel" value="CrumbedPeanuts">
+					<span class="label-body">CrumbedPeanuts</span>
+				</label>
+
+				<label class="">
+					<input type="checkbox" name="" class="toppingSel" value="CaramelDip">
+					<span class="label-body">CaramelDip</span>
+				</label>
+				<label class="">
+					<input type="checkbox" name="" class="toppingSel" value="ChocolateDip">
+					<span class="label-body">ChocolateDip</span>
+				</label>
+				<label class="">
+					<input type="checkbox" name="" class="toppingSel" value="SmartiesDip">
+					<span class="label-body">SmartiesDip</span>
+				</label>
+				<label class="">
+					<input type="checkbox" name="" class="toppingSel" value="OreosDip">
+					<span class="label-body">OreosDip</span>
+				</label>
+				<label class="">
+					<input type="checkbox" name="" class="toppingSel" value="AstrosDip">
+					<span class="label-body">AstrosDip</span>
+				</label>
+				
+			</div><br>
+
+			<div>
+				<button class="addBtn">GetPrice</button>
+
+			</div>
+		</div>
+
+		<div class="totalCost">
+
+		</div>
+
+	</div>
+	
+</body>
+
+</html>
+<script src="./Ice_cream.js"></script>
+
+<script src="./Ice_cream-dom.js"></script>
